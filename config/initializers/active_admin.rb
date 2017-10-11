@@ -12,5 +12,4 @@ ActiveAdmin.setup do |config|
   config.default_namespace = false
   config.breadcrumb = Proc.new{ [] }
   config.comments_menu = false
-  config.root_to = 'dashboard#index'
 end
