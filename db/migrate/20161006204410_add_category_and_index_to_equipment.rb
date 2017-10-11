@@ -1,4 +1,4 @@
-class AddCategoryToEquipment < ActiveRecord::Migration[4.2]
+class AddCategoryAndIndexToEquipment < ActiveRecord::Migration[4.2]
   def change
     add_column :equipment, :category_id, :integer
     
