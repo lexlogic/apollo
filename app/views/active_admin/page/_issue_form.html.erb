@@ -1,0 +1,12 @@
+<%= form_tag({:controller => 'parts', :action => 'checkin'}, :id => 'part_checkin', :remote => true) do %>
+    <div class="modal-body">
+      <div class="input-group">
+        <input type="text" class="form-control" id="sku" name="sku" placeholder="Waiting for Scanner..." />
+        <span class="input-group-btn">
+          <%= button_tag( :class => "btn btn-primary") do %>
+              <span class='glyphicon glyphicon-search'></span> Start Scanning
+          <% end %> 
+        </span>
+      </div>
+    </div>
+<% end %>

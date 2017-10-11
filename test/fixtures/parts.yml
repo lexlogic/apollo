@@ -1,0 +1,32 @@
+# == Schema Information
+#
+# Table name: parts
+#
+#  id            :integer          not null, primary key
+#  name          :string
+#  description   :text
+#  location_id   :integer
+#  sku           :string
+#  created_at    :datetime         not null
+#  updated_at    :datetime         not null
+#  part_url      :string
+#  document      :string
+#  attachment    :string
+#  department_id :integer
+#  qty           :integer
+#  checkedIn     :boolean
+#
+
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  description: MyText
+  location_id: 1
+  sku: MyString
+
+two:
+  name: MyString
+  description: MyText
+  location_id: 1
+  sku: MyString

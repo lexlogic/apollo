@@ -1,0 +1,51 @@
+@import "bootstrap-sprockets";
+@import "bootstrap";
+@import "active_admin/mixins";
+@import "active_admin/base";
+@import "active_admin/select2/base";
+@import "wigu/active_admin_theme";
+
+.ui-dialog {
+    background-color: #f4f4f4;
+}
+#header h1 img {
+    position: relative;
+    top: -2px;
+    height: 70px;
+}
+#wrapper #title_bar {
+    background-color: transparent;
+    border: none;
+}
+#title_bar {
+    background-color: transparent;
+}
+#wrapper #title_bar #titlebar_left h2 {
+    color: #5E6469;
+}
+#header {
+    padding: 0px;
+}
+#wrapper #header {
+    padding: 0px;
+    background-color: #607D8B;
+}
+.panel > h3 {
+    background-color: #607D8B;
+    -webkit-border-top-left-radius: 0px;
+    -webkit-border-top-right-radius: 0px;
+    -moz-border-radius-topleft: 0px;
+    -moz-border-radius-topright: 0px;
+     border-top-left-radius: 0px; 
+     border-top-right-radius: 0px; 
+}
+#wrapper .sidebar_section.panel > h3 {
+    background-color: #607D8B;    
+}
+table tr td {
+    vertical-align: top;
+    padding: 15px;
+    line-height: 1.42857143;
+    vertical-align: top;
+    border-top: 1px solid #F5F5F5;
+}

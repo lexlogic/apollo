@@ -1,0 +1,28 @@
+# == Schema Information
+#
+# Table name: shift_reports
+#
+#  id            :integer          not null, primary key
+#  name          :string
+#  equipment_id  :integer
+#  down_time     :string
+#  description   :text
+#  created_at    :datetime         not null
+#  updated_at    :datetime         not null
+#  department_id :integer
+#  location_id   :integer
+#
+
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  equipment_id: 1
+  down_time: MyString
+  description: MyText
+
+two:
+  name: MyString
+  equipment_id: 1
+  down_time: MyString
+  description: MyText

@@ -1,0 +1,36 @@
+# == Schema Information
+#
+# Table name: shift_entries
+#
+#  id              :integer          not null, primary key
+#  time            :string
+#  job_name        :string
+#  description     :text
+#  downtime        :string
+#  department_id   :integer
+#  location_id     :integer
+#  user_id         :integer
+#  created_at      :datetime         not null
+#  updated_at      :datetime         not null
+#  shift_report_id :integer
+#
+
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  time: MyString
+  job_name: MyString
+  description: MyText
+  downtime: MyString
+  department_id: 1
+  location_id: 1
+  user: 
+
+two:
+  time: MyString
+  job_name: MyString
+  description: MyText
+  downtime: MyString
+  department_id: 1
+  location_id: 1
+  user: 

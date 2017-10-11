@@ -1,0 +1,34 @@
+
+# default: &default
+#   adapter: postgresql
+#   encoding: unicode
+#   # For details on connection pooling, see rails configuration guide
+#   # http://guides.rubyonrails.org/configuring.html#database-pooling
+#   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+#   username: postgres
+#   password: password
+#   host: localhost
+
+# development:
+#   <<: *default
+#   database: apollo_development
+
+# test:
+#   <<: *default
+#   database: apollo_test
+
+# production:
+#   <<: *default
+#   database: apollo_production
+#   username: apollo
+#   password: <%= ENV['APOLLO_DATABASE_PASSWORD'] %>
+development:
+  adapter: sqlite3
+  database: db/db_dev_db.sqlite3
+  pool: 5
+  timeout: 5000
+
+production:
+  adapter: postgresql
+  encoding: unicode
+  pool: 5

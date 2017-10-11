@@ -1,0 +1,33 @@
+# == Schema Information
+#
+# Table name: equipment
+#
+#  id              :integer          not null, primary key
+#  name            :string
+#  description     :text
+#  location_id     :integer
+#  status          :string
+#  serial          :string
+#  created_at      :datetime         not null
+#  updated_at      :datetime         not null
+#  category_id     :integer
+#  manufacturer_id :integer
+#
+
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  description: MyText
+  location_id: 1
+  status: MyString
+  manufacturer: MyString
+  serial: MyString
+
+two:
+  name: MyString
+  description: MyText
+  location_id: 1
+  status: MyString
+  manufacturer: MyString
+  serial: MyString
