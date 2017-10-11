@@ -7,7 +7,7 @@ class ApplicationController < ActionController::Base
   end
   
   def access_denied(exception)
-    redirect_to root, alert: exception.message
+    redirect_to dashboard_url, alert: exception.message
   end
   
 end
