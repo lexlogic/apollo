@@ -1,6 +1,8 @@
 ActiveAdmin.register Todo do
     permit_params :name, :status
     config.per_page = 5
+
+    menu label: "Task List"
     
     filter :status, as: :select, collection: proc { Todo::STATUS }
     
