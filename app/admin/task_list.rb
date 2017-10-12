@@ -1,4 +1,4 @@
-ActiveAdmin.register Todo do
+ActiveAdmin.register TaskList do
     permit_params :name, :status
     config.per_page = 5
 
@@ -6,14 +6,14 @@ ActiveAdmin.register Todo do
     
     filter :status, as: :select, collection: proc { Todo::STATUS }
     
-    scope :open, :default => true do |todos|
-      todos.where(:status => 'open')
+    scope :open, :default => true do |task_list|
+      task_list.where(:status => 'open')
      end
-    scope :started do |todos|
-      todos.where(:status => 'started')
+    scope :started do |task_list|
+      task_list.where(:status => 'started')
      end
-    scope :complete do |todos|
-      todos.where(:status => 'complete')
+    scope :complete do |task_list|
+      task_list.where(:status => 'complete')
      end
     
     index pagination_total: false do
@@ -62,7 +62,7 @@ ActiveAdmin.register Todo do
     
     controller do
         def create
-            @todo = current_user.todos.build(permitted_params[:todo])   
+            @todo = current_user.task_list.build(permitted_params[:todo])   
             
             respond_to do |format|
                 if @todo.save
