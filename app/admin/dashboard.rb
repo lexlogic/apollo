@@ -35,7 +35,7 @@ ActiveAdmin.register_page "Dashboard" do
               end 
             }
             column ("Type") { |v| v.item_type.underscore.humanize }
-            #column ("Modified By") { |v| User.find(v.whodunnit).full_name}
+            column ("Modified By") { |v| User.find(v.whodunnit).full_name}
           end
       end
     end
