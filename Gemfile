@@ -45,6 +45,6 @@ gem 'carrierwave'
 gem 'bootstrap-sass'
 gem 'active_admin_editor', github: 'ejholmes/active_admin_editor'
 gem 'best_in_place', github: 'bernat/best_in_place'
-gem 'bcrypt', '~> 3.1.11', platforms: [:ruby, :x64_mingw, :mingw]
+#gem 'bcrypt', '~> 3.1.11', platforms: [:ruby, :x64_mingw, :mingw]
 gem 'wdm', '>= 0.1.0' if Gem.win_platform?
 gem 'rails_12factor', group: :production 

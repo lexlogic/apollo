@@ -301,6 +301,7 @@ DEPENDENCIES
   activeadmin
   activeadmin-select2!
   annotate!
+  bcrypt (~> 3.1.11)
   best_in_place!
   bootstrap-sass
   byebug
