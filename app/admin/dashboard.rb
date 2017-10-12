@@ -8,9 +8,9 @@ ActiveAdmin.register_page "Dashboard" do
       
       column do
         panel "Recently Completed Tasks" do
-          table_for Todo.where("status = ?", "complete").order('id desc').limit(3).each do |todos|
-            column("")    {|todo| link_to(todo.name, todo_path(todo)) }
-            column("")    {|todo| status_tag(todo.status)}
+          table_for TaskList.where("status = ?", "complete").order('id desc').limit(3).each do |task_list|
+            column("")    {|task| link_to(task.name, task_list_path(task)) }
+            column("")    {|task| status_tag(task.status)}
           end
         end
       end
