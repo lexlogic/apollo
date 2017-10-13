@@ -62,7 +62,7 @@ ActiveAdmin.register Todo do
     
     controller do
         def create
-            @todo = current_user.todos.build(permitted_params[:todos])   
+            @todo = current_user.todos.build(permitted_params[:todo])   
             
             respond_to do |format|
                 if @todo.save
