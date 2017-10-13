@@ -33,7 +33,7 @@ class User < ApplicationRecord
   
   has_many :work_orders
   has_many :events
-  has_many :task_lists
+  has_many :todos
   
   validates :username, :email, :full_name, presence: true
   validates :password, :password_confirmation, presence: true, on: :create

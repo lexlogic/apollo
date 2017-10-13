@@ -1,10 +1,10 @@
-ActiveAdmin.register TaskList do
+ActiveAdmin.register Todo do
     permit_params :name, :status
     config.per_page = 5
 
     menu label: "Task List"
     
-    filter :status, as: :select, collection: proc { TaskList::STATUS }
+    filter :status, as: :select, collection: proc { Todo::STATUS }
     
     scope :open, :default => true do |task_list|
       task_list.where(:status => 'open')
@@ -17,7 +17,7 @@ ActiveAdmin.register TaskList do
      end
     
     index pagination_total: false do
-        column("Task") {|task_list| link_to "#{task_list.name} ", task_list_path(task_list) }
+        column("Task") {|todo| link_to "#{todo.name} ", todo_path(todo) }
         column :user
         column :updated_at, :sortable => :updated_at
         column("Status")    {|item| status_tag(item.status, 
@@ -32,7 +32,7 @@ ActiveAdmin.register TaskList do
         )}
     end
     
-    show :title => "" do |task_list|
+    show :title => "" do |todo|
         attributes_table do
             row :name
             row :created_at
@@ -54,7 +54,7 @@ ActiveAdmin.register TaskList do
         f.inputs "User Details" do
             f.input :name, label: "Task Name"
             if !f.object.new_record?
-                f.input :status, as: :select2, :input_html => { :style => 'width:80%' }, collection: TaskList::STATUS if current_user.role == 'admin'
+                f.input :status, as: :select2, :input_html => { :style => 'width:80%' }, collection: Todo::STATUS if current_user.role == 'admin'
             end
         end
         f.actions
@@ -62,11 +62,11 @@ ActiveAdmin.register TaskList do
     
     controller do
         def create
-            @task_list = current_user.task_list.build(permitted_params[:task_list])   
+            @todo = current_user.task_list.build(permitted_params[:todo])   
             
             respond_to do |format|
-                if @task_list.save
-                    format.html { redirect_to @task_list, notice: 'Task was successfully created.' }
+                if @todo.save
+                    format.html { redirect_to @todo, notice: 'Todo was successfully created.' }
                 else
                     format.html { render action: "new" }
                 end

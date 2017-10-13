@@ -10,7 +10,7 @@
 #  user_id    :integer
 #
 
-class TaskList < ApplicationRecord
+class Todo < ApplicationRecord
     belongs_to :user
     has_paper_trail
     

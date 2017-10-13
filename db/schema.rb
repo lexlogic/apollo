@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171012214316) do
+ActiveRecord::Schema.define(version: 20161014183622) do
 
   create_table "active_admin_comments", force: :cascade do |t|
     t.string "namespace"
@@ -118,13 +118,13 @@ ActiveRecord::Schema.define(version: 20171012214316) do
     t.index ["location_id"], name: "index_shift_reports_on_location_id"
   end
 
-  create_table "task_list", force: :cascade do |t|
+  create_table "todos", force: :cascade do |t|
     t.string "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "status", default: "open"
     t.integer "user_id"
-    t.index ["status"], name: "index_task_list_on_status"
+    t.index ["status"], name: "index_todos_on_status"
   end
 
   create_table "users", force: :cascade do |t|
