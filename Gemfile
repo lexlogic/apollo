@@ -17,7 +17,6 @@ gem 'coffee-script-source', '1.8.0' if Gem.win_platform?
 gem 'jquery-rails'
 gem 'turbolinks'
 gem 'jbuilder'
-gem 'rails_12factor', group: :production
 
 group :development, :test do
   gem 'byebug', platform: :mri
